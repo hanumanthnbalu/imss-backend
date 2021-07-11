@@ -34,7 +34,6 @@ export class UserService {
   }
 
   async create(user: User): Promise<User> {
-    console.log(user)
     const userExist = await this.userModel.findOne({ email: user.email });
     if (userExist) {
       throw new BadRequestException('User already exist.');

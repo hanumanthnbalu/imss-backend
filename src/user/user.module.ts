@@ -21,10 +21,6 @@ import { APP_GUARD } from '@nestjs/core';
   ],
   controllers: [UserController],
   providers: [UserService, LocalStrategy, JwtStrategy,
-    //   {
-    //   provide: APP_GUARD,
-    //   useClass: JwtAuthGuard,
-    // }
   ],
   exports: [UserService, JwtModule],
 })
